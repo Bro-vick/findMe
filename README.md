@@ -5,7 +5,9 @@ A portfolio Project required for the ALX-SE program
 
 ## Team
 [Abdulrazaq Ayoade](https://github.com/AYcrown77): Back-end 
+
 [George Victor](https://github.com/Bro-vick): Front-end 
+
 [Adewole Conde](https://github.com/phatboislym): Back-end/Devops
 
 ### Here is a list of tools and resources that may be necessary to complete your project:
