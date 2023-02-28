@@ -20,20 +20,28 @@ a{
     background: rgb(3, 28, 61); 
     /*background: rgb(5, 82, 199);*/
     padding: 6px 6%;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 100;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .logo img{
-    width: 300px;
-    padding-right: 20px;
-    
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.navbar-center{
+    flex: 1;
+    text-align: center;
 }
 .navbar-center ul li{ 
     display: inline-block;
     list-style: none;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 .navbar-center ul li a{
     display: flex;
@@ -93,6 +101,8 @@ a{
 .navbar-left{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
 }
 .search-box img{
     width: 14px;
@@ -107,80 +117,33 @@ a{
 /*-------- navbar end -------------*/
 
 
-/* forms style */
-.forms {
-    position: absolute;
-    top: 100%;
-    display: grid;
-}
 
-.forms > * {
-    justify-items: center;
-    display: grid;
-    align-items: center;
-    height: 50vh;
-    padding: 0 3rem;
-    width: max-content;
-    background-color: whitesmoke;
-    grid-row: 1;
-    grid-column: 1 / 2;
-    z-index: -1;
-    display: none;
+/*-------- sidebar start -------------*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: rgb(3, 28, 61); 
+    /*background: rgb(5, 82, 199);*/
+    z-index: 99;
+    transition: all 0.3s ease;
 }
-
-.form-btns {
+.sidebar.active{
+    left: -250px;
+}
+.sidebar-header{
+    padding: 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-
-.form-btns > * {
-    border: 1px solid rgb(16, 16, 19);
-    border-radius: 8rem;
-    padding: .5rem 1rem;
-    cursor: pointer;
+.sidebar-header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
-
-.authentication {
-    display: flex;
-    column-gap: 2rem;
-    position: relative;
-}
-
-.authentication > * {
-    font-family: var(--buttonFontFamily);
-    font-weight: var(--weight600);
-    font-size: 1rem;
-    padding: .5rem 1rem;
-    border-radius: 8rem;
-    cursor: pointer;
-}
-.forms {
-    padding: 0;
-    cursor: default;
-}
-
-.sign-up-btn:hover ~ .forms > .sign-up,
-.sign-up:hover {
-    z-index: 1;
-    display: grid;
-}
-
-.sign-in-btn:hover ~ .forms > .sign-in,
-.sign-in:hover {
-    z-index: 1;
-    display: grid;
-}
-/*----forms style end-----*/
-
-.profile-thumbnail {
-    position: absolute;
-}
-.profile-header {
-    min-height: 260px;
-    margin-left: 280px;
-}
-
-
 
 
 
@@ -204,6 +167,7 @@ a{
 
 .gpt3__header-content h1 {
     font-family: var(--font-family);
+    color: #fff;
     font-weight: 800;
     font-size: 62px;
     line-height: 75px;
@@ -216,53 +180,32 @@ a{
     font-size: 20px;
     line-height: 28px;
     color: var(--color-text);
-
     margin-top: 1.5rem;
 }
 
 .gpt3__header-content__input {
-    width: 100%;
+    width: 300px;
     margin: 2rem 0 1rem;
-
     display: flex;
     flex-direction: row;
 }
 
-.gpt3__header-content__input input {
-    flex: 2;
-    width: 100%;
-    min-height: 50px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    background: var(--color-footer);
-    border: 2px solid var(--color-footer);
-    padding: 0 1rem;
-    outline: none;
-    color: #fff;
-
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.gpt3__header-content__input button {
+.button {
     flex: 0.6;
-    width: 100%;
-    min-height: 50px;
-    font-family: var(--font-family);
+    width: 50px;
+    /* min-height: 50px; */
+    /* font-family: var(--font-family); */
     font-weight: 400;
     font-size: 20px;
-    line-height: 28px;
+    /* line-height: 28px; */
     background: #FF4820;
     border: 2px solid #FF4820;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     color: #fff;
     cursor: pointer;
     outline: none;
-
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .gpt3__header-content__people {
