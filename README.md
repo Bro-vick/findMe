@@ -51,3 +51,9 @@ pytest
 [George Victor](https://github.com/Bro-vick): Front-end
 
 [Adewole Conde](https://github.com/phatboislym): Back-end/Devops
+=======
+[Abdulrazaq Ayoade](https://github.com/AYcrown77): Back-end 
+
+[George Victor](https://github.com/Bro-vick): Front-end 
+
+[Adewole Conde](https://github.com/phatboislym): Back-end/Devops
