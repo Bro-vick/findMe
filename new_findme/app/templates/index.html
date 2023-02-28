@@ -8,60 +8,78 @@
 </head>
 <body>
   <nav class="navbar">
+    <a href="main/index.html" class="logo"><img src="../static/images/findmetxt-removebg-preview.png"></a>
     <div class="navbar-left">
-      <h1 class="fmeh1">FINDME</h1>
-      <a href="main/index.html" class="logo"><img src="../static/images/Gold_Luxury_Initial_Circle_Logo-removebg-preview.png"></a>
-    
+      
         <div class="search-box">
             <img src="../static/images/search.png">
             <input type="text" placeholder="Search">
         </div>
-
     </div>
     
     <div class="navbar-center">
         <ul>
             <li><a href="#" class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li> 
-	    <!-- <li><a href="#"><img src="../static/images/network.png"> <span>My Network</span></a></li> -->
-	    <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/network.png"> <span>My Profile</span></a></li>
-            <li><a href="#"><img src="../static/images/jobs.png"> <span>jobs</span></a></li>
-        </ul>
-        <div class="authentication">
-	  <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
-	  <li><a href="{{ url_for('auth.register') }}">Sign Up</a></li>
-        </div>
+	          <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/message.png">My Profile</a></li>
+            <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/connect.png"> <span>Sign Up</span></a></li>
+            <li><a href="{{ url_for('auth.login') }}"><img src="../static/images/network.png">  <span>Log in</span></a></li>
+          </ul>
+        
     </div>
   </nav>
-<!-------- navbar end ------------->
+  <!-------- navbar end ------------->
 
-<!-----------------body  -------------->
-<section>
-  <div class="gpt3__header section__padding" id="home">
-    <div class="gpt3__header-content">
-      <h1 class="gradient__text">Let&apos;s Create an amazing profile for you with Findme</h1>
-      <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
 
-      <div class="gpt3__header-content__input">
-        <input type="email" placeholder="Your Email Address" />
-        <button type="button">Get Started</button>
+
+  <!-----------------body start---------------->
+  <section>
+    <div class="gpt3__header section__padding" id="home">
+      <div class="gpt3__header-content">
+        <h1 class="gradient__text">Let&apos;s Create an amazing profile for you with Findme</h1>
+        <p>Find your friends and family easily with find.me</p>
+
+        <div class="gpt3__header-content__input">
+          <a href="{{ url_for('auth.register') }}" class="button">Get Started Now</a>
+        </div>
+
+        <div class="gpt3__header-content__people">
+          <img src="../static/images/people.png" />
+          <p>1,600 people requested access a visit in last 24 hours</p>
+        </div>
       </div>
 
-      <div class="gpt3__header-content__people">
-        <img src="../static/images/people.png" />
-        <p>1,600 people requested access a visit in last 24 hours</p>
+      <div class="gpt3__header-image">
+        <img src="../static/images/ai.png" />
       </div>
     </div>
-
-    <div class="gpt3__header-image">
-      <img src="../static/images/ai.png" />
+  
+    
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="left">
+              <h1>Find your friends</h1>
+              <p></p>
+              <a href="{{ url_for('auth.register') }}" class="btn">Sign Up</a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="right">
+              <img src="../static/images/cover-pic.png">
+            </div>
+          </div>
+        </div>
+      </div> 
     </div>
-  </div>
-</section>
-
- <video src="../static/share.mp4" muted loop autoplay  controls="false" ></video>
+  </section>
 
 
-<!-----------------body end---------------->
+  
+
+
+
+  <!-----------------body end---------------->
   
 </body>
 </html>
