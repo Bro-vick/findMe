@@ -2,9 +2,6 @@
 A portfolio Project required for the ALX-SE program
 
 
-### Flask + ReactJS 
-
-
 
 ## About the project
 The project is a simple social media aggregator app that allows simple CRUD actions against a Flask REST API.
@@ -47,3 +44,10 @@ python run.py
 ``
 pytest
 ``
+
+## Team
+[Abdulrazaq Ayoade](https://github.com/AYcrown77): Back-end 
+
+[George Victor](https://github.com/Bro-vick): Front-end 
+
+[Adewole Conde](https://github.com/phatboislym): Back-end/Devops
