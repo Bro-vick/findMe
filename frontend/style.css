@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #f0f2f5;
+    color: #5f5f5f;
+}
+a{
+    text-decoration: none;
+    /*color: 5f5f5f; */
+    color: #f2f2f2;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgb(3, 28, 61); 
+    /*background: rgb(5, 82, 199);*/
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.logo img{
+    width: 300px;
+    padding-right: 20px;
+    
+}
+.navbar-center ul li{ 
+    display: inline-block;
+    list-style: none;
+    padding-bottom: 50px;
+}
+.navbar-center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 8px;
+    padding-right: 5px;
+    position: relative;
+}
+.navbar-center ul li a img{
+    width: 30px;
+}
+.navbar-center ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    /* background: #045be6; */
+    background: rgb(234, 236, 236);
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+}
+.navbar-center ul li a:hover::after,
+.navbar-center ul li a.active-link::after
+{
+    width: 100%;
+}
+.nav-profile-img{
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative; 
+}
+.online{
+    position:relative;
+}
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    right: 0px;
+    top: 0px;
+    /* background: #41db51; */
+    position: absolute ;
+}
+.search-box{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+.search-box img{
+    width: 14px;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+/*-------- navbar end -------------*/
+
+
+/* forms style */
+.forms {
+    position: absolute;
+    top: 100%;
+    display: grid;
+}
+
+.forms > * {
+    justify-items: center;
+    display: grid;
+    align-items: center;
+    height: 50vh;
+    padding: 0 3rem;
+    width: max-content;
+    background-color: whitesmoke;
+    grid-row: 1;
+    grid-column: 1 / 2;
+    z-index: -1;
+    display: none;
+}
+
+.form-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btns > * {
+    border: 1px solid rgb(16, 16, 19);
+    border-radius: 8rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.authentication {
+    display: flex;
+    column-gap: 2rem;
+    position: relative;
+}
+
+.authentication > * {
+    font-family: var(--buttonFontFamily);
+    font-weight: var(--weight600);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 8rem;
+    cursor: pointer;
+}
+.forms {
+    padding: 0;
+    cursor: default;
+}
+
+.sign-up-btn:hover ~ .forms > .sign-up,
+.sign-up:hover {
+    z-index: 1;
+    display: grid;
+}
+
+.sign-in-btn:hover ~ .forms > .sign-in,
+.sign-in:hover {
+    z-index: 1;
+    display: grid;
+}
+/*----forms style end-----*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gpt3__header {
+    display: flex;
+    flex-direction: row;
+    background: rgb(3, 28, 61); 
+}
+
+.gpt3__header-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-right: 5rem;
+}
+
+.gpt3__header-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+.gpt3__header-content p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-text);
+
+    margin-top: 1.5rem;
+}
+
+.gpt3__header-content__input {
+    width: 100%;
+    margin: 2rem 0 1rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.gpt3__header-content__input input {
+    flex: 2;
+    width: 100%;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background: var(--color-footer);
+    border: 2px solid var(--color-footer);
+    padding: 0 1rem;
+    outline: none;
+    color: #fff;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.gpt3__header-content__input button {
+    flex: 0.6;
+    width: 100%;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background: #FF4820;
+    border: 2px solid #FF4820;
+    padding: 0 1rem;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.gpt3__header-content__people {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    margin-top: 2rem;
+}
+
+.gpt3__header-content__people img {
+    width: 181.79px;
+    height: 38px;
+}
+
+.gpt3__header-content__people p {
+    margin: 0 0 0 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 38px;
+    color: #fff;
+    text-align: center;
+}
+
+.gpt3__header-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gpt3__header-image img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    .gpt3__header {
+        flex-direction: column;
+    }
+
+    .gpt3__header-content {
+        margin: 0 0 3rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .gpt3__header-content h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .gpt3__header-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .gpt3__header-content__people {
+        flex-direction: column;
+    }
+
+    .gpt3__header-content__people p {
+        margin: 0;
+    }
+
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .gpt3__header-content h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .gpt3__header-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
