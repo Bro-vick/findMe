@@ -17,17 +17,19 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    /* background: rgb(2, 19, 117); */
     background: rgb(3, 28, 61); 
-    /*background: rgb(5, 82, 199);*/
     padding: 6px 6%;
     position: relative;
     top: 0;
     z-index: 100;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /* background: rgb(2, 17, 100); */
+    /* background: rgb(1, 32, 207); */
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 }
 .logo img{
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
 }
 .logo{
@@ -116,43 +118,11 @@ a{
 }
 /*-------- navbar end -------------*/
 
-
-
-/*-------- sidebar start -------------*/
-.sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background: rgb(3, 28, 61); 
-    /*background: rgb(5, 82, 199);*/
-    z-index: 99;
-    transition: all 0.3s ease;
-}
-.sidebar.active{
-    left: -250px;
-}
-.sidebar-header{
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.sidebar-header img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-
-
-
-
 .gpt3__header {
     display: flex;
     flex-direction: row;
-    background: rgb(3, 28, 61); 
+    /* background: rgb(3, 28, 61);  */
+    background: rgb(2, 17, 100);
 }
 
 .gpt3__header-content {
@@ -167,7 +137,7 @@ a{
 
 .gpt3__header-content h1 {
     font-family: var(--font-family);
-    color: #fff;
+    color: #000;
     font-weight: 800;
     font-size: 62px;
     line-height: 75px;
@@ -198,10 +168,10 @@ a{
     font-weight: 400;
     font-size: 20px;
     /* line-height: 28px; */
-    background: #FF4820;
-    border: 2px solid #FF4820;
+    background: rgb(145, 123, 0);
+    border: 2px solid #ffde20e3;
     /* padding: 0 1rem; */
-    color: #fff;
+    color: #000;
     cursor: pointer;
     outline: none;
     border-top-right-radius: 15px;
@@ -298,3 +268,110 @@ a{
         line-height: 16px;
     }
 }
+
+.choose {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 9rem;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    flex-direction: column;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+}
+.choose h2 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 8-rem;
+    line-height: 28px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.choose p {
+    color: #7b7e86;
+    line-height: 2rem;
+}
+.video-container{
+    position: relative;
+    max-width: fit-content;
+    max-height: fit-content;
+    align-content: center;
+
+}
+.video-container img {
+    position: absolute;
+    align-items: center;
+    top: 0;
+    max-width: fit-content;
+    max-height: fit-content;
+    object-fit: cover;
+    width: 70%;
+    height: 70%;
+    z-index: 1;
+}
+
+
+/*-------- main-content end -------------*/
+
+/*-------- footer start -------------*/
+.container{
+    position: relative;
+    /* bottom: 0; */
+    background: rgb(2, 17, 100);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+.row{
+    color: #9ea7ad;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.brand img {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;    
+    height: 300px;
+    width: 300px;
+    justify-content: space-evenly;
+
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+footer li {
+      display: flex;
+      gap: 2rem;
+      display: flex;
+      align-items: center;
+}
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+    .container {grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+    }
+    .brand img {
+        height: 200px;
+        width: 200px;
+    }
+    .row{
+        gap: 1rem;
+    }
+    footer li {
+        gap: 1rem;
+    }
+
+  
+
+}
+/*-------- footer end -------------*/
