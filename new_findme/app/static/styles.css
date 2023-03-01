@@ -121,8 +121,8 @@ a{
 .gpt3__header {
     display: flex;
     flex-direction: row;
-    /* background: rgb(3, 28, 61);  */
-    background: rgb(2, 17, 100);
+    background: rgb(3, 28, 61); 
+    /* background: rgb(2, 17, 100); */
 }
 
 .gpt3__header-content {
@@ -167,9 +167,10 @@ a{
     /* font-family: var(--font-family); */
     font-weight: 400;
     font-size: 20px;
+    background-color: whitesmoke;
     /* line-height: 28px; */
-    background: rgb(145, 123, 0);
-    border: 2px solid #ffde20e3;
+    /* background: rgb(145, 123, 0);
+    border: 2px solid #ffde20e3; */
     /* padding: 0 1rem; */
     color: #000;
     cursor: pointer;
@@ -291,28 +292,10 @@ a{
     margin-bottom: 2rem;
 }
 .choose p {
-    color: #7b7e86;
+    color: #222324;
+    
     line-height: 2rem;
 }
-.video-container{
-    position: relative;
-    max-width: fit-content;
-    max-height: fit-content;
-    align-content: center;
-
-}
-.video-container img {
-    position: absolute;
-    align-items: center;
-    top: 0;
-    max-width: fit-content;
-    max-height: fit-content;
-    object-fit: cover;
-    width: 70%;
-    height: 70%;
-    z-index: 1;
-}
-
 
 /*-------- main-content end -------------*/
 
@@ -320,8 +303,10 @@ a{
 .container{
     position: relative;
     /* bottom: 0; */
-    background: rgb(2, 17, 100);
+    background-color: rgb(3, 28, 61);
+    /* background: rgb(2, 17, 100); */
     padding: 10px 20px;
+    padding-right: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -333,6 +318,9 @@ a{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+.row p {
+    padding-left: 400px;
 }
 .brand img {
     display: flex;

@@ -20,8 +20,8 @@
     <div class="navbar-center">
         <ul>
             <li><a href="#" class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li> 
-	          <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/message.png">My Profile</a></li>
-            <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/connect.png"> <span>Sign Up</span></a></li>
+	          <!-- <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/message.png">My Profile</a></li> -->
+            <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/message.png"> <span>Sign Up</span></a></li>
             <li><a href="{{ url_for('auth.login') }}"><img src="../static/images/network.png">  <span>Log in</span></a></li>
           </ul>
         
@@ -44,7 +44,7 @@
 
         <div class="gpt3__header-content__people">
           <img src="../static/images/people.png" />
-          <p>1,600 people requested access a visit in last 24 hours</p>
+          <p>Over 1,600 people requested access in the last 24 hours</p>
         </div>
       </div>
 
@@ -54,16 +54,14 @@
     </div>
   
     <div class="choose">
-      <div class="video-container">
-        <video src="../static/images/share.mp4" autoplay loop muted></video>
         <img src="../static/images/Gold_Luxury_Initial_Circle_Logo-removebg-preview.png" alt="logo">
-      </div>
-      <h2>Why should you Choose Our Website ?</h2>
+      <h2>Why should you Use Our Website ?</h2>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book.
+        This website intends to solve the problem of providing an easy and effective way for users to aggregate, manage and showcase their online presence and social media links in one place. This can include links to personal websites, social media profiles, online portfolios, and other online content that users want to share with others.
+        "findme" will not solve the problem of creating or managing the online content itself, it is only meant to provide a platform for users to organize and share their existing online presence.
+        This website will help a wide range of users, including professionals, freelancers, artists, and students, who want to promote their online presence and make it easy for others to find and connect with them.
+        The project is not specific to a particular locale and can be used by users from any part of the world. 
+
       </p>
       <Button text="Read More" blue ></Button>
     </div>
@@ -81,41 +79,31 @@
     <div class="container">
       <div class="row">
         <div class="brand">
-          <img src="../static/images/Gold_Luxury_Initial_Circle_Logo-removebg-preview.png" alt="logo" class="logo">
+          <img src="../static/images/findmetxt-removebg-preview.png" alt="logo" class="logo">
         </div>
-        <p class="description">Thee-Mechanics FINDME</p>
+        <p class="description">Copyright Thee-Mechanics FINDME</p>
       </div>
       <div class="row">
         <h3>Our Services</h3>
         <ul class="list">
-          <li>Service 1</li>
-          <li>Service 2</li>
-          <li>Service 3</li>
-        </ul>
-      </div>
-      <div class="row">
-        <h3>Company</h3>
-        <ul class="list">
-          <li>About Us</li>
+          <li>Branding</li>
+          <li>Portfolio/Profile development</li>
+          <li>Connections</li>
           <li>FAQ</li>
-          <li>Terms &amp; Conditions</li>
         </ul>
       </div>
+  
       <div class="row">
         <h3>Contact Us</h3>
         <ul>
-          <li>
-            <span>123 Main St, Anytown USA</span>
-          </li>
-          <li>
-            <span>contact@example.com</span>
-          </li>
-          <li>
-            <span>+1 (555) 555-1234</span>
-          </li>
+          <li><span>ALX NIGERIA</span></li>
+          <li><span>contact@gmail.com</span></li>
+          <li><span>(+234)-810-663-9984</span></li>
+          <li>About Us</li>
         </ul>
       </div>
     </div>
+    
   </footer>
   
 </body>
