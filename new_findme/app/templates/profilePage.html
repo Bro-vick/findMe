@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../static/profilePage.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </nav>
+    </header>
+    <main>
+      <section class="profile-info">
+        <div class="profile-pic">
+          <img src="https://via.placeholder.com/150" alt="Profile Picture" />
+        </div>
+        <h1>John Doe</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          dignissim, arcu eu rutrum sodales, est neque viverra elit, ut egestas
+          nulla felis eu nisl. Cras facilisis lorem eget orci dignissim euismod.
+        </p>
+        <ul class="social-links">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </section>
+      <section class="add-links">
+        <h2>Add Social Media Links</h2>
+        <form>
+          <div class="form-group">
+            <label for="facebook-link">Facebook:</label>
+            <input type="text" id="facebook-link" name="facebook-link" />
+          </div>
+          <div class="form-group">
+            <label for="twitter-link">Twitter:</label>
+            <input type="text" id="twitter-link" name="twitter-link" />
+          </div>
+          <div class="form-group">
+            <label for="instagram-link">Instagram:</label>
+            <input type="text" id="instagram-link" name="instagram-link" />
+          </div>
+          <div class="form-group">
+            <label for="linkedin-link">LinkedIn:</label>
+            <input type="text" id="linkedin-link" name="linkedin-link" />
+          </div>
+          <div class="form-group">
+            <label for="youtube-link">YouTube:</label>
+            <input type="text" id="youtube-link" name="youtube-link" />
+          </div>
+          <button type="submit">Save Links</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
