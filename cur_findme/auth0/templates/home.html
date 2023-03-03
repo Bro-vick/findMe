@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>find.me</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="../static/styles.css">-->
+  </head>
+  <body>
+    {% if session %}
+    <h1>Welcome {{session.userinfo.name}}!</h1>
+    <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
+    <div><pre>{{pretty}}</pre></div>
+    {% else %}
+    <!-- <h1 id="profileDropDown"> Konichiwa, gaijin </h1>
+    <p><a href="/login" id="qsLoginBtn">Login</a></p>-->
+    <nav class="navbar">
+    <a href="main/index.html" class="logo"><img src="../static/images/findmetxt-removebg-preview.png"></a>
+    <div class="navbar-left">
+      <div class="search-box">
+        <img src="../static/images/search.png">
+          <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <div class="navbar-center">
+      <ul>
+        <li><img src="../static/images/home.png"> <span>Home</span></a></li>
+        <li><img src="../static/images/message.png"> <span>Sign Up</span></a></li>
+	<li><a href="/login" id="qsLoginBtn"><img src="../static/images/network.png"> <span>Log in</span></a></li>
+      </ul>
+    </div>
+    </nav>
+    {% endif %}
+  </body>
+</html>
