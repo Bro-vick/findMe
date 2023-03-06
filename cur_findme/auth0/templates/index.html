@@ -5,6 +5,7 @@
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
   <link rel="stylesheet" href="../static/styles.css">
+
 </head>
 <body>
   {% if session %}
@@ -12,7 +13,7 @@
   <head>
   <title>find.me</title>
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
   <link rel="stylesheet" href="../static/styles.css">
   </head>
   <body>
@@ -30,41 +31,41 @@
    <div class="navbar-center">
      <ul>
        <li><a href="#" class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li>
-       <li><a href=<img src="../static/images/network.png"> <span>My Profile</span></a></li>
+       <li><a href= ""> <img src="../static/images/network.png"> <span>My Profile</span></a></li>
        <li><a href="/logout" id="qsLogoutBtn"> <span>logout</span></a></li>
      </ul>
-       <div class="authentication">
-         <li><Log In</a></li>
-         <li>Sign Up</a></li>
-       </div>
    </div>
   </nav>
 <!--------navbar end ------------->
-
 <section>
-  <div class="gpt3__header section__padding" id="home">
-    <div class="gpt3__header-content">
-      <h1 class="gradient__text">Let&apos;s Create an amazing profile for you with Findme</h1>
-    <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
-
-      <div class="gpt3__header-content__input">
-        <input type="email" placeholder="Your Email Address" />
-        <button type="button">Get Started</button>
-      </div>
-
-      <div class="gpt3__header-content__people">
-        <img src="../static/images/people.png" />
-        <p>1,600 people requested access a visit in last 24 hours</p>
-      </div>
-    </div>
-
-    <div class="gpt3__header-image">
-      <img src="../static/images/ai.png" />
-    </div>
+  <div>
+    <img src="../static/images/user-4.png" alt="logo">
   </div>
- <section>
+  <div>
+    <label for="Name">
+      <input type="text">
+    </label>
+    <label for="Social Media Links">
+      <input type="url">
+    </label>
+  </div>
+</section>
 
-   <video src="../static/share.mp4" muted loop autoplay  controls="false" ></video>
+<!-- <section class="profilePage">
+    <div class="profileImage">
+        <img src="{{ session['profile']['picture'] }}" />
+    </div>
+    <div class="profileInfo">
+        <h1> {{ session['profile']['name'] }}</h1>
+        <h2> {{ session['profile']['email'] }}</h2>
+        <h3> {{ session['profile']['nickname'] }}</h3>
+        <h4> {{ session['profile']['picture'] }}</h4>
+        <h5> {{ session['profile']['updated_at'] }}</h5>
+        <h6> {{ session['profile']['user_id'] }}</h6>
+        <h7> {{ session['profile']['created_at'] }}</h7>
+        <h8> {{ session['profile']['sub'] }}</h8>
+ <section> -->
+
   <!-----------------body end---------------->
 
 </body>
