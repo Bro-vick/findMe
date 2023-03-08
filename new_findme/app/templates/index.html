@@ -22,7 +22,7 @@
             <li><a href="#" class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li> 
 	          <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/message.png">My Profile</a></li>
             <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/message.png"> <span>Sign Up</span></a></li>
-            <li><a href="{{ url_for('auth.login') }}"><img src="../static/images/network.png">  <span>Log in</span></a></li>
+            <li><a href="{{ url_for('auth.logout') }}"><img src="../static/images/network.png">  <span>Log out</span></a></li>
           </ul>
         
     </div>

@@ -9,6 +9,10 @@ from ..decorators import admin_required
 
 @main.route('/')
 def index():
+    return render_template('homepage.html')
+
+@main.route('/home')
+def home():
     return render_template('index.html')
 
 @main.route('/user/<username>')
@@ -24,6 +28,7 @@ def edit_profile():
         current_user.name = form.name.data
         current_user.location = form.location.data
         current_user.about_me = form.about_me.data
+        current_user.picture = form.picture.data
         db.session.add(current_user._get_current_object())
         db.session.commit()
         flash('Your profile has been updated.')
@@ -31,6 +36,7 @@ def edit_profile():
     form.name.data = current_user.name
     form.location.data = current_user.location
     form.about_me.data = current_user.about_me
+    form.picture.data = current_user.picture
     return render_template('edit_profile.html', form=form)
 
 @main.route('/edit-profile/<int:id>', methods=['GET', 'POST'])
