@@ -20,6 +20,18 @@ p{
     line-height: 20px;
     color: #fff;
 }
+h1{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: #fff;
+}
+label{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+}
 /*   user.html styles */
 .user-page-header{
     background: #fff; 
