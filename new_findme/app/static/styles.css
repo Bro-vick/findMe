@@ -70,7 +70,12 @@ label{
     /* margin-top: -100px; */
     border: 5px solid #fff;
 }
-
+.social-links{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
 /*  user.html styles end */
 
 /* navbar styles */
