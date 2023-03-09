@@ -15,7 +15,7 @@ class EditProfileForm(FlaskForm):
     location = StringField('Location', validators=[Length(0, 64)])
     about_me = TextAreaField('About me')
     profile_picture = FileField('Profile picture')
-    phone_number = IntegerField('Phone number')
+    phone_number = StringField('Phone number')
     facebook = StringField('Facebook url')
     linkedin = StringField('Linkedin url')
     twitter = StringField('Twitter url')
