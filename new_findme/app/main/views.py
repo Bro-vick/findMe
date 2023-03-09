@@ -9,7 +9,7 @@ from ..decorators import admin_required
 
 @main.route('/')
 def index():
-    return render_template('homepage.html')
+    return render_template('landingPage.html')
 
 @main.route('/home')
 def home():
