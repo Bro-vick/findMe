@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, BooleanField, SelectField,\
-    SubmitField, FileField
+    SubmitField, FileField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, Regexp
 from wtforms import ValidationError
 from ..models import Role, User
@@ -11,10 +11,20 @@ class NameForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class EditProfileForm(FlaskForm):
-    name = StringField('Real name', validators=[Length(0, 64)])
+    name = StringField('Full name', validators=[Length(0, 100)])
     location = StringField('Location', validators=[Length(0, 64)])
     about_me = TextAreaField('About me')
-    #picture = FileField('Profile picture', validators=[DataRequired()])
+    profile_picture = FileField('Profile picture')
+    phone_number = IntegerField('Phone number')
+    facebook = StringField('Facebook url')
+    linkedin = StringField('Linkedin url')
+    twitter = StringField('Twitter url')
+    github = StringField('Github url')
+    youtube = StringField('Youtube Channel url')
+    instagram = StringField('Instagram url')
+    snapchat = StringField('Snapchat url')
+    tictok = StringField('TicTok url')
+    medium = StringField('Medium url')
     submit = SubmitField('Submit')
 
 class EditProfileAdminForm(FlaskForm):
