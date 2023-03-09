@@ -82,8 +82,8 @@ class User(UserMixin, db.Model):
     member_since = db.Column(db.DateTime(), default=datetime.utcnow)
     last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
     avatar_hash = db.Column(db.String(32))
-    profile_picture = db.Column(db.String(100))
-    phone_number = db.Column(db.Integer)
+    profile_picture = db.Column(db.LargeBinary)
+    phone_number = db.Column(db.String(11))
     facebook = db.Column(db.String(100))
     linkedin = db.Column(db.String(100))
     twitter = db.Column(db.String(100))
@@ -93,7 +93,6 @@ class User(UserMixin, db.Model):
     snapchat = db.Column(db.String(100))
     tiktok = db.Column(db.String(100))
     medium = db.Column(db.String(100))
-
 
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)

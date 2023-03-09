@@ -28,7 +28,7 @@ def edit_profile():
         current_user.name = form.name.data
         current_user.location = form.location.data
         current_user.about_me = form.about_me.data
-        current_user.profile_picture = form.profile_picture.data
+        current_user.profile_picture = form.profile_picture.data.read()
         current_user.phone_number = form.phone_number.data
         current_user.facebook = form.facebook.data
         current_user.linkedin = form.linkedin.data
