@@ -28,7 +28,16 @@ def edit_profile():
         current_user.name = form.name.data
         current_user.location = form.location.data
         current_user.about_me = form.about_me.data
-        current_user.picture = form.picture.data
+        current_user.profile_picture = form.profile_picture.data
+        current_user.phone_number = form.phone_number.data
+        current_user.facebook = form.facebook.data
+        current_user.linkedin = form.linkedin.data
+        current_user.github = form.github.data
+        current_user.youtube = form.youtube.data
+        current_user.instagram = form.instagram.data
+        current_user.snapchat = form.snapchat.data
+        current_user.medium = form.medium.data
+        current_user.tiktok = form.medium.data
         db.session.add(current_user._get_current_object())
         db.session.commit()
         flash('Your profile has been updated.')
@@ -36,7 +45,7 @@ def edit_profile():
     form.name.data = current_user.name
     form.location.data = current_user.location
     form.about_me.data = current_user.about_me
-    form.picture.data = current_user.picture
+    #form.picture.data = current_user.picture
     return render_template('edit_profile.html', form=form)
 
 @main.route('/edit-profile/<int:id>', methods=['GET', 'POST'])
