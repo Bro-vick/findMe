@@ -18,8 +18,8 @@
             <h1>{{ user.username }}</h1>
 	    <!-- <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">-->
         </div>
-{% if current_user.profile_picture %}
-    <img src="{{ url_for('main.get_profile_picture', user_id=current_user.id) }}" alt="Profile Picture" style="width: 100px; height: 100px;">
+{% if user.profile_picture %}
+    <img src="{{ url_for('main.get_profile_picture', user_id=user.id) }}" alt="Profile Picture" style="width: 100px; height: 100px;">
 {% else %}
     <p>No profile picture</p>
 {% endif %}
