@@ -1,4 +1,4 @@
-from flask import render_template, redirect, url_for, abort, flash
+from flask import render_template, redirect, url_for, abort, flash, Response
 from flask_login import login_required, current_user
 from . import main
 from .forms import EditProfileForm, EditProfileAdminForm
@@ -40,13 +40,18 @@ def edit_profile():
         current_user.tiktok = form.medium.data
         db.session.add(current_user._get_current_object())
         db.session.commit()
-        flash('Your profile has been updated.')
+       # flash('Your profile has been updated.')
         return redirect(url_for('.user', username=current_user.username))
     form.name.data = current_user.name
     form.location.data = current_user.location
     form.about_me.data = current_user.about_me
     #form.picture.data = current_user.picture
     return render_template('edit_profile.html', form=form)
+
+@main.route('/user/profile-picture/<int:user_id>')
+def get_profile_picture(user_id):
+    user = User.query.get_or_404(user_id)
+    return Response(user.profile_picture, mimetype='image/png')
 
 @main.route('/edit-profile/<int:id>', methods=['GET', 'POST'])
 @login_required

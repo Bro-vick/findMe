@@ -16,9 +16,14 @@
     <div class="user-page-header">
         <div class="user-profile-pic">
             <h1>{{ user.username }}</h1>
-            <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">
+	    <!-- <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">-->
         </div>
-        
+{% if current_user.profile_picture %}
+    <img src="{{ url_for('main.get_profile_picture', user_id=current_user.id) }}" alt="Profile Picture" style="width: 100px; height: 100px;">
+{% else %}
+    <p>No profile picture</p>
+{% endif %}
+
         <br>
         <br>
         <div class="user-profile-header">
