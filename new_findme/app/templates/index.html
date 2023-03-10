@@ -7,65 +7,78 @@
   <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
+  <!--------navbar start ------------->
   <nav class="navbar">
-    <a href="main/index.html" class="logo"><img src="../static/images/findmetxt-removebg-preview.png"></a>
     <div class="navbar-left">
-      
-        <div class="search-box">
+      <!-- <h1 class="fmeh1">FINDME</h1> -->
+      <a href="." class="logo"><img src="../static/images/findmetxt-removebg-preview.png"></a>
+      <!-- <img src="../static/images/findmetxt-removebg-preview.png" alt="logo" class="logo"> -->
+        <!-- <div class="search-box">
             <img src="../static/images/search.png">
             <input type="text" placeholder="Search">
-        </div>
+        </div> -->
+
     </div>
     
-    <div class="navbar-center">
+      <div class="navbar-center">
         <ul>
-            <li><a href="#" class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li> 
-	          <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/message.png">My Profile</a></li>
-            <!-- <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/message.png"> <span>Sign Up</span></a></li> -->
-            <li><a href="{{ url_for('auth.logout') }}"><img src="../static/images/network.png">  <span>Log out</span></a></li>
-          </ul>
-        
-    </div>
+            <li><a href="." class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li> 
+            <li><a href="{{ url_for('auth.login') }}"><img src="../static/images/network.png">Log In</a></li>
+            <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/jobs.png"> <span>Sign Up</span></a></li>
+        </ul>
+      </div>
   </nav>
-  <!-------- navbar end ------------->
+<!--------navbar end -------------/>
 
-
-
-  <!-----------------body start---------------->
+  <--------------body start------------->
+    <div>
+      <img src="../static/images/Clean White & Blue Business Consultant Modern Minimalist Online Portfolio.svg" alt="" width="100%">
+    </div>
   <div class="clients">
-    <img src="../static/images/client1.png" alt="">
-    <img src="../static/images/client2.png" alt="">
-    <!-- <img src="../static/images/client3.png" alt=""> -->
-    <img src="../static/images/client4.png" alt="">
-    <!-- <img src="../static/images/GitHub-Emblem-removebg-preview.png" alt="" height="80px" width="150px"> -->
+    <img src="../static/images/google-removebg-preview.png" alt="" width="120px">
+    <img src="../static/images/linkedin-removebg-preview.png" alt="" height="150px" width="190px">
+    <img src="../static/images/slackLogo-removebg-preview.png" alt="" width="120px">
+    <img src="../static/images/youtube-removebg-preview.png" alt="" width="120px">
+    <img src="../static/images/GitHub-Emblem-removebg-preview.png" alt="" height="60px" width="150px">
   </div>
   <section>
-    <div class="hero">
-      <img src="../static/images/jessicafind.png" alt="">
-      <br>
-      <br>
-      <h1 style="color: rgb(3, 28, 61);">Grow your audience as a <br>content creator and freelancer<br> </h1>
+    <div class="gpt3__header section__padding" id="home">
+      <div class="gpt3__header-content">
+        <h1 class="gradient__text">Let&apos;s Create an amazing profile page for you with Findme</h1>
+        <p>Find your friends and family easily with find.me</p>
+
+        <div class="gpt3__header-content__input">
+          <a href="{{ url_for('auth.register') }}" class="button">Get Started Now</a>
+        </div>
+
+        <div class="gpt3__header-content__people">
+          <img src="../static/images/people.png" />
+        </div>
+      </div>
+
+      <div class="gpt3__header-image">
+        <img src="../static/images/ai.png" />
+      </div>
     </div>
-    <br>
-    <div class="hero3">
-      <h2 style="color: rgb(3, 28, 61);">Capture all you do <br> and who you are in one page</h2>
-      <br>
-      <img src="../static/images/Brown blue portfolio.svg" alt="">
+  
+    <div class="choose">
+        <img src="../static/images/Gold_Luxury_Initial_Circle_Logo-removebg-preview.png" alt="logo">
+      <h2>Why should you Use Our Website ?</h2>
+      <p>
+        This website intends to solve the problem of providing an easy and effective way for users to aggregate, manage and showcase their online presence and social media links in one place. This can include links to personal websites, social media profiles, online portfolios, and other online content that users want to share with others.
+        "findme" will not solve the problem of creating or managing the online content itself, it is only meant to provide a platform for users to organize and share their existing online presence.
+        This website will help a wide range of users, including professionals, freelancers, artists, and students, who want to promote their online presence and make it easy for others to find and connect with them.
+        The project is not specific to a particular locale and can be used by users from any part of the world. 
+
+      </p>
+      <Button text="Read More" blue ></Button>
     </div>
-    <div class="hero2">
-      <img src="../static/images/Clean White & Blue Business Consultant Modern Minimalist Online Portfolio.svg" alt="" width="100%">
-      <h2 style="color: rgb(3, 28, 61);"> Get more clients as an entrepreneur and <br>find highly skilled talents</h2>
-    </div>
-   
   </section>
 
-
-  
-
+<!-----------------body end---------------->
 
 
-  <!-----------------body end---------------->
-
+<!-----------------footer start---------------->
   <!-----------------footer start---------------->
   <footer>
     <div class="container">
@@ -88,7 +101,7 @@
       <div class="row">
         <h3>Contact Us</h3>
         <ul>
-          <li><span>ALX NIGERIA</span></li>
+          <li><span>FINDME NIGERIA</span></li>
           <li><span>contact@gmail.com</span></li>
           <li><span>(+234)-810-663-9984</span></li>
           <li>About Us</li>

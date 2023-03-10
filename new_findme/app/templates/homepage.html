@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>find.me</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="{{ url_for('main.home') }}" class="logo"><img src="../static/images/findmetxt-removebg-preview.png"></a>
+    <div class="navbar-left">
+      
+        <div class="search-box">
+            <img src="../static/images/search.png">
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+    
+    <div class="navbar-center">
+        <ul>
+            <li><a href="{{ url_for('main.home') }}" class="active-link"><img src="../static/images/home.png"> <span>Home</span></a></li> 
+	          <li><a href="{{ url_for('main.user', username=current_user.username) }}"><img src="../static/images/message.png">My Profile</a></li>
+            <!-- <li><a href="{{ url_for('auth.register') }}"><img src="../static/images/message.png"> <span>Sign Up</span></a></li> -->
+            <li><a href="{{ url_for('auth.logout') }}"><img src="../static/images/network.png">  <span>Log out</span></a></li>
+          </ul>
+        
+    </div>
+  </nav>
+  <!-------- navbar end ------------->
+
+
+
+  <!-----------------body start---------------->
+  <div class="clients">
+    <img src="../static/images/client1.png" alt="">
+    <img src="../static/images/client2.png" alt="">
+    <!-- <img src="../static/images/client3.png" alt=""> -->
+    <img src="../static/images/client4.png" alt="">
+    <!-- <img src="../static/images/GitHub-Emblem-removebg-preview.png" alt="" height="80px" width="150px"> -->
+  </div>
+  <section>
+    <div class="hero">
+      <img src="../static/images/jessicafind.png" alt="">
+      <br>
+      <br>
+      <h1 style="color: rgb(3, 28, 61);">Grow your audience as a <br>content creator and freelancer<br> </h1>
+    </div>
+    <br>
+    <div class="hero3">
+      <h2 style="color: rgb(3, 28, 61);">Capture all you do <br> and who you are in one page</h2>
+      <br>
+      <img src="../static/images/Brown blue portfolio.svg" alt="">
+    </div>
+    <div class="hero2">
+      <img src="../static/images/Clean White & Blue Business Consultant Modern Minimalist Online Portfolio.svg" alt="" width="100%">
+      <h2 style="color: rgb(3, 28, 61);"> Get more clients as an entrepreneur and <br>find highly skilled talents</h2>
+    </div>
+   
+  </section>
+
+
+  <!-----------------body end---------------->
+
+  <!-----------------footer start---------------->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="brand">
+          <img src="../static/images/findmetxt-removebg-preview.png" alt="logo" class="logo">
+        </div>
+        <p class="description">Copyright Thee-Mechanics FINDME</p>
+      </div>
+      <div class="row">
+        <h3>Our Services</h3>
+        <ul class="list">
+          <li>Branding</li>
+          <li>Portfolio/Profile development</li>
+          <li>Connections</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+  
+      <div class="row">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><span>ALX NIGERIA</span></li>
+          <li><span>contact@gmail.com</span></li>
+          <li><span>(+234)-810-663-9984</span></li>
+          <li>About Us</li>
+        </ul>
+      </div>
+    </div>
+    
+  </footer>
+  
+</body>
+</html>

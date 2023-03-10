@@ -6,16 +6,12 @@ from wtforms import ValidationError
 from ..models import Role, User
 
 
-class NameForm(FlaskForm):
-    name = StringField('What is your name?', validators=[DataRequired()])
-    submit = SubmitField('Submit')
-
 class EditProfileForm(FlaskForm):
     name = StringField('Full name', validators=[Length(0, 100)])
     location = StringField('Location', validators=[Length(0, 64)])
     about_me = TextAreaField('About me')
-    profile_picture = FileField('Profile picture')
-    phone_number = StringField('Phone number')
+    profile_picture = FileField('Profile picture', validators=[DataRequired()])
+    email = StringField('Email Address')
     facebook = StringField('Facebook url')
     linkedin = StringField('Linkedin url')
     twitter = StringField('Twitter url')
@@ -23,10 +19,11 @@ class EditProfileForm(FlaskForm):
     youtube = StringField('Youtube Channel url')
     instagram = StringField('Instagram url')
     snapchat = StringField('Snapchat url')
-    tictok = StringField('TicTok url')
+    tiktok = StringField('TicTok url')
     medium = StringField('Medium url')
     submit = SubmitField('Submit')
 
+"""
 class EditProfileAdminForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Length(1, 64),
                                              Email()])
@@ -57,3 +54,4 @@ class EditProfileAdminForm(FlaskForm):
         if field.data != self.user.username and \
                 User.query.filter_by(username=field.data).first():
             raise ValidationError('Username already in use.')
+        """
