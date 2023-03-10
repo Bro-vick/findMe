@@ -10,21 +10,19 @@
 <body>
     {% extends "base.html" %}
 
-    {% block title %}Flasky - {{ user.username }}{% endblock %}
+    {% block title %}Findme - {{ user.username }}{% endblock %}
 
     {% block page_content %}
     <div class="user-page-header">
         <div class="user-profile-pic">
             <h1>{{ user.username }}</h1>
-            <img class="img-rounded profile-thumbnail" src="{{ user.profile_picture }}">
-	    <!-- <img class="img-rounded profile-thumbnail" src="{{ user.gravatar(size=256) }}">-->
-        </div>
+        
 {% if user.profile_picture %}
-    <img src="{{ url_for('main.get_profile_picture', user_id=user.id) }}" alt="Profile Picture" style="width: 100px; height: 100px;">
+        <img src="{{ url_for('main.get_profile_picture', user_id=user.id) }}" alt="Profile Picture" style="width: 80%; height: 150%; border-radius: 20%;">
 {% else %}
-    <p>No profile picture</p>
+        <p>No profile picture</p>
 {% endif %}
-
+        </div>
         <br>
         <br>
         <div class="user-profile-header">
@@ -38,13 +36,24 @@
             <p><a href="mailto:{{ user.email }}">{{ user.email }}</a></p>
             {% endif %}
             {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
-            <p>Member since {{ moment(user.member_since).format('L') }}. Last seen {{ moment(user.last_seen).fromNow() }}.</p>
-            <p>You can connect to me on <a href="{{ user.github }}"><img src="../static/images/GitHub-Emblem-removebg-preview.png" alt="" class="social-links" height="1rem" width="2rem" ></a>,</p>
+            <!-- <p>Member since {{ moment(user.member_since).format('L') }}. Last seen {{ moment(user.last_seen).fromNow() }}.</p> -->
+            <h3 style="text-decoration:solid">Find me on:</h3>
+            <div class="social-links">
+            {% if user.github %}<a href="{{ user.github }}"><img src="../static/images/github@256px.png" alt="" ></a>{% endif %}
+            {% if user.linkedin %}<a href="{{ user.linkedin }}"><img src="../static/images/linkedin@256px.png" alt="" ></a>{% endif %}
+            {% if user.facebook %}<a href="{{ user.facebook }}"><img src="../static/images/facebook@256px.png" alt="" ></a>{% endif %}
+            {% if user.twitter %}<a href="{{ user.twitter }}"><img src="../static/images/twitter@256px.png" alt="" ></a>{% endif %}
+            {% if user.youtube %}<a href="{{ user.youtube }}"><img src="../static/images/youtube@256px.png" alt="" ></a>{% endif %}
+            {% if user.instagram %}<a href="{{ user.instagram }}"><img src="../static/images/instagram@256px.png" alt="" ></a>{% endif %}
+            <!-- {% if user.snapchat %}<p>You can find me on <a href="{{ user.snapchat }}"><img src="../static/images/GitHub-Emblem-removebg-preview.png" alt="" class="social-links" ></a>,</p>{% endif %} -->
+            {% if user.tiktok %}<a href="{{ user.tiktok }}"><img src="../static/images/tik_tok@256px.png" alt="" ></a>{% endif %}
+            {% if user.medium %}<a href="{{ user.medium }}"><img src="../static/images/medium@256px.png" alt="" ></a>{% endif %}
+            </div>
             <br>
             <br>
             <p>
             {% if user == current_user %}
-                <a class="btn btn-default" href="{{ url_for('.edit_profile') }}">Edit Profile</a>
+                <a class="btn btn-default" href="{{ url_for('.edit_profile') }}" style="border: -50px; border-color: rgb(0, 0, 12);">Edit Profile</a>
                 {% endif %}
                 {% if current_user.is_administrator() %}
                 <a class="btn btn-danger" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Edit Profile [Admin]</a>
