@@ -1,5 +1,6 @@
 import json
-import os import environ as env
+import os 
+from os import environ as env
 import click
 from flask_migrate import Migrate
 from app import create_app, db
