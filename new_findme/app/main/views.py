@@ -1,7 +1,7 @@
 from flask import render_template, redirect, url_for, abort, flash, Response
 from flask_login import login_required, current_user
 from . import main
-from .forms import EditProfileForm
+from .forms import EditProfileForm, UploadPicture
 from .. import db
 from ..models import Role, User
 from ..decorators import admin_required
@@ -28,7 +28,6 @@ def edit_profile():
         current_user.name = form.name.data
         current_user.location = form.location.data
         current_user.about_me = form.about_me.data
-        current_user.profile_picture = form.profile_picture.data.read()
         current_user.email = form.email.data
         current_user.facebook = form.facebook.data
         current_user.linkedin = form.linkedin.data
@@ -45,7 +44,6 @@ def edit_profile():
     form.name.data = current_user.name
     form.location.data = current_user.location
     form.about_me.data = current_user.about_me
-    form.profile_picture.data = current_user.profile_picture
     form.email.data = current_user.email
     form.facebook.data = current_user.facebook
     form.linkedin.data = current_user.linkedin
@@ -57,6 +55,17 @@ def edit_profile():
     form.medium.data = current_user.medium
     form.tiktok.data = current_user.tiktok
     return render_template('edit_profile.html', form=form)
+
+@main.route('/upload-picture', methods=['GET', 'POST'])
+@login_required
+def upload_picture():
+    form = UploadPicture()
+    if form.validate_on_submit():
+        current_user.profile_picture = form.profile_picture.data.read()
+        db.session.add(current_user._get_current_object())
+        db.session.commit()
+        return redirect(url_for('.user', username=current_user.username))
+    return render_template('upload_picture.html', form=form)
 
 
 @main.route('/user/profile-picture/<int:user_id>')

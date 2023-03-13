@@ -18,12 +18,13 @@
             <h1>{{ user.username }}</h1>
         
 {% if user.profile_picture %}
-        <img src="{{ url_for('main.get_profile_picture', user_id=user.id) }}" alt="Profile Picture" style="width: 80%; height: 150%; border-radius: 20%;">
+	<span><a href="{{ url_for('.upload_picture') }}"><img  src="{{ url_for('main.get_profile_picture', user_id=user.id) }}" alt="Profile Picture" style="width: 80%; height: 150%; border-radius: 20%;">
 {% else %}
         <p>No profile picture</p>
 {% endif %}
-        </div>
-        <br>
+	</span>
+    </div>
+    	<br>
         <br>
         <div class="user-profile-header">
             
@@ -54,6 +55,7 @@
             <p>
             {% if user == current_user %}
                 <a class="btn btn-default" href="{{ url_for('.edit_profile') }}" style="border: -50px; border-color: rgb(0, 0, 12);">Edit Profile</a>
+		<a class="btn btn-default" href="{{ url_for('.upload_picture') }}" style="border: -50px; border-color: rgb(0, 0, 12);">Upload Picture</a>
                 {% endif %}
                 {% if current_user.is_administrator() %}
                 <a class="btn btn-danger" href="{{ url_for('.edit_profile_admin', id=user.id) }}">Edit Profile [Admin]</a>
