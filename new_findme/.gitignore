@@ -1,3 +1,33 @@
+# ignore .gitignore files
+*.gitignore
+
+# ignore __pycache__ directories
+__pycache__
+*__pycache__*
+*.pyc
+
+# ignore swap files
+*.swp
+*~
+
+# ignore .bash files
+*.bash
+
+# ignore test and intermediate C files
+*main*
+*.o
+
+# ignore vscode files
+.vscode
+*.vscode
+
+# ignore C executables
+*.out
+
+# ignore venv files
 *__pycache__
 venv
 *.pyc
+*venv
+findme
+
