@@ -29,5 +29,6 @@ __pycache__
 venv
 *.pyc
 *venv
-findme
+*findme/*
+*myenv/*
 
