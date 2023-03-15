@@ -22,18 +22,18 @@ The project is a simple social media aggregator app that allows simple CRUD acti
 - JWT Authentication on the frontend
 - Making API Calls with Fetch API
 
-## Live Demo On ...
+### Live Demo On [YouTube](https://youtu.be/qia7FdQhqDA)
 
-# To run this project
+## To run this project
 1. Clone the Git repository
-2. In the folder (new_findme), create a virtual environment using your favorite method.
-3. Install project dependencies with  
+2. In the folder `new_findme`, create a virtual environment using your favorite method.
+3. Install project dependencies with
 ``
 pip install -r requirements.txt
 ``
 4. Run project with
 ``
-python run.py
+python app.py
 ``
 5. Run test
 ``
