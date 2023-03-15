@@ -177,25 +177,25 @@ label{
     border: 0;
 }
 /* media queries */
-@media (max-width: 768px){
-.navbar {
+@media screen and (width <= 768px){
+    .navbar {   
     flex-direction: column;
     justify-content: center;
-}
+    }
 
-.navbar-left, .navbar-center {
+    .navbar-left, .navbar-center {
     padding: 0;
     width: 100%;
     text-align: center;
-}
+    }
 
-.navbar-center ul li {
+    .navbar-center ul li {
     padding: 10px 0;
-}
+    }
 
-.search-box {
+    .search-box {
     margin: 10px 0;
-}
+    }
 }
 /*-------- navbar end -------------*/
 
@@ -307,7 +307,7 @@ label{
     height: 100%;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 700px) {
     .gpt3__header {
         flex-direction: column;
     }
